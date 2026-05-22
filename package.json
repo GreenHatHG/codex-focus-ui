@@ -19,10 +19,11 @@
     "proxy:run": "powershell -ExecutionPolicy Bypass -File scripts/cfu.ps1 run",
     "sync:codex": "node scripts/sync-codex-chat.js",
     "service:start": "powershell -ExecutionPolicy Bypass -File scripts/cfu.ps1 service-start",
-    "service:stop": "powershell -ExecutionPolicy Bypass -File scripts/cfu.ps1 service-stop",
+    "service:stop": "node scripts/cfu-stop.js",
     "service:status": "powershell -ExecutionPolicy Bypass -File scripts/cfu.ps1 service-status",
     "dev": "npm run dev:cli",
-    "ui": "powershell -ExecutionPolicy Bypass -File scripts/cfu.ps1 ui",
+    "ui": "node scripts/cfu-ui.js",
+    "ui:stop": "node scripts/cfu-stop.js",
     "global:link": "npm link",
     "global:unlink": "npm unlink -g codex-focus-ui",
     "ui:menu": "powershell -ExecutionPolicy Bypass -File scripts/cfu-control.ps1 menu"
@@ -35,4 +36,3 @@
     "cfu-ui": "scripts/cfu-ui.js"
   }
 }
-
